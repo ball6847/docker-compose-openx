@@ -1,0 +1,9 @@
+/data/revive/var/*
+!/data/revive/var/.gitkeep
+/data/revive/images/*
+!/data/revive/images/.gitkeep
+/data/revive/plugins/*
+!/data/revive/plugins/.gitkeep
+
+/data/postgresql/*
+!/data/postgresql/.gitkeep
