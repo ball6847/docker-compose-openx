@@ -1,8 +1,6 @@
 revive:
   image: vimagick/revive
   container_name: revive
-  ports:
-    - "8080:80"
   links:
     - postgresql
   volumes:
