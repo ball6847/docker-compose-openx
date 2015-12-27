@@ -6,9 +6,6 @@ revive:
   links:
     - postgresql
   volumes:
-    #- "/var/www/html/plugins"
-    #- "/var/www/html/var"
-    #- "/var/www/html/www/images"
     - "./data/revive/plugins/:/var/www/html/plugins"
     - "./data/revive/var/:/var/www/html/var"
     - "./data/revive/images/:/var/www/html/www/images"
