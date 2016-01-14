@@ -1,0 +1,24 @@
+revive:
+    image: vimagick/revive
+    container_name: revive
+    links:
+        - postgresql
+    volumes:
+        - "/etc/localtime:/etc/localtime:ro"
+        - "./data/revive/plugins/:/var/www/html/plugins"
+        - "./data/revive/var/:/var/www/html/var"
+        - "./data/revive/images/:/var/www/html/www/images"
+        - "./entrypoint.sh:/entrypoint.sh"
+        - "./nginx.conf:/etc/nginx/nginx.conf"
+    restart: always
+    entrypoint: "/entrypoint.sh"
+postgresql:
+    image: "sameersbn/postgresql:latest"
+    container_name: "revive-postgresql"
+    restart: always
+    volumes:
+        - "./data/postgresql:/var/lib/postgresql"
+    environment:
+        - "DB_USER=openx"
+        - "DB_PASS=changethis123"
+        - "DB_NAME=openx"

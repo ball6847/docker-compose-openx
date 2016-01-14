@@ -7,3 +7,5 @@
 
 /data/postgresql/*
 !/data/postgresql/.gitkeep
+
+/docker-compose.yml
